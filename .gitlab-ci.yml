@@ -62,7 +62,7 @@ upload-nightly:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
   tags:
     - docker
-  image: nitrokey/ci-nightly-upload:latest
+  image: registry.git.dotplex.com/nitrokey/gitlab-ci/ci-nightly-build:latest
   before_script:
     - apt-get update -y
     - ./ci-scripts/copy_common_scripts_key.sh
