@@ -14,7 +14,7 @@ variables:
 build-pypi:
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push"'
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+  #  - if: '$CI_PIPELINE_SOURCE == "schedule"'
   tags:
     - lxc
   stage: build
@@ -27,7 +27,7 @@ build-pypi:
 build-msi:
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push"'
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+  #  - if: '$CI_PIPELINE_SOURCE == "schedule"'
     - if: '$CI_PIPELINE_SOURCE == "web"'
   tags:
     - lxc
